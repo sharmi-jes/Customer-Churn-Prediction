@@ -3,7 +3,8 @@ import os
 from src.exception import CustomException
 import dill
 from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import r2_score
+from sklearn.metrics import accuracy_score
+from imblearn.over_sampling import SMOTE
 import pickle
 
 
@@ -19,33 +20,46 @@ def save_object(file_path,obj):
         
 
 
-# def evaluate_model(x_train, y_train, x_test, y_test, models, params):
-#     try:
-#         report = {}
-#         for model_name, model in models.items():
-#             param_grid = params.get(model_name, {})  # Get params for the specific model
+def evaluate_model_with_smote(x_train, y_train, x_test, y_test, models):
+    """
+    Evaluate multiple models on training and testing data after applying SMOTE on the training data.
+    
+    Parameters:
+        x_train: Training features.
+        y_train: Training labels.
+        x_test: Testing features.
+        y_test: Testing labels.
+        models: Dictionary of model names and their corresponding instantiated models.
 
-#             # Initialize GridSearchCV with model and its parameters
-#             gs = GridSearchCV(model, param_grid, cv=3)
-#             gs.fit(x_train, y_train)
+    Returns:
+        Dictionary with model names as keys and their test accuracy scores as values.
+    """
+    try:
+        report = {}
+        
+        # Apply SMOTE to balance the training data
+        smote = SMOTE(random_state=42)
+        x_train_resampled, y_train_resampled = smote.fit_resample(x_train, y_train)
 
-#             # Set best parameters and train model
-#             model.set_params(**gs.best_params_)
-#             model.fit(x_train, y_train)
+        for model_name, model in models.items():
+            # Train the model on the resampled training data
+            model.fit(x_train_resampled, y_train_resampled)
 
-#             # Predictions and scoring
-#             y_train_pred = model.predict(x_train)
-#             y_test_pred = model.predict(x_test)
-#             r2_score_train = r2_score(y_train, y_train_pred)
-#             r2_score_test = r2_score(y_test, y_test_pred)
+            # Predictions on training and testing data
+            y_train_pred = model.predict(x_train_resampled)
+            y_test_pred = model.predict(x_test)
 
-#             # Save the test score in the report
-#             report[model_name] = r2_score_test
+            # Calculate accuracy scores
+            r2_score_train = accuracy_score(y_train_resampled, y_train_pred)
+            r2_score_test = accuracy_score(y_test, y_test_pred)
 
-#         return report  # Return after evaluating all models
+            # Save the test accuracy score in the report
+            report[model_name] = r2_score_test
 
-#     except Exception as e:
-#         raise CustomException(e, sys)
+        return report
+
+    except Exception as e:
+        raise CustomException(e, sys)
 
 
 # def load_object(file_path):

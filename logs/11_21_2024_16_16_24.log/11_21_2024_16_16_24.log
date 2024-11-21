@@ -1,0 +1,23 @@
+[ 2024-11-21 16:16:26,801 ] 25 root - INFO - write a get data transformation fucntion to transform the data
+[ 2024-11-21 16:16:26,818 ] 18 root - INFO - take the decorator class for not use the init methos to create a varible
+[ 2024-11-21 16:16:26,818 ] 32 root - INFO - read the data
+[ 2024-11-21 16:16:26,832 ] 34 root - INFO - create a directory for the arifacts folder
+[ 2024-11-21 16:16:26,832 ] 37 root - INFO - pass the raw data to the folder
+[ 2024-11-21 16:16:26,873 ] 41 root - INFO - split the data train and test data
+[ 2024-11-21 16:16:26,885 ] 44 root - INFO - pass the train data to the path
+[ 2024-11-21 16:16:26,922 ] 47 root - INFO - pass the test data to the path
+[ 2024-11-21 16:16:26,936 ] 50 root - INFO - return the train and test data for the next process
+[ 2024-11-21 16:16:26,945 ] 90 root - INFO - Creating preprocessor object
+[ 2024-11-21 16:16:26,945 ] 54 root - INFO - return the preprocessor
+[ 2024-11-21 16:16:26,945 ] 96 root - INFO - split the target from the both train and test data
+[ 2024-11-21 16:16:26,945 ] 103 root - INFO - apply preprocessor for the train and test data
+[ 2024-11-21 16:16:26,968 ] 107 root - INFO - combine the target and input data for the train and test
+[ 2024-11-21 16:16:26,968 ] 122 root - INFO - return the train and test array
+[ 2024-11-21 16:16:26,968 ] 27 root - INFO - take the x_train,y_train,x_tets,y_test data
+[ 2024-11-21 16:16:26,968 ] 37 root - INFO - take the models
+[ 2024-11-21 16:16:44,160 ] 54 root - INFO - best score calculated
+[ 2024-11-21 16:16:44,160 ] 62 root - INFO - find the best model
+[ 2024-11-21 16:16:44,160 ] 67 root - INFO - check the relation
+[ 2024-11-21 16:16:44,160 ] 70 root - INFO - we get a good model  both on training and testing data
+[ 2024-11-21 16:16:44,249 ] 77 root - INFO - Make the prediction
+[ 2024-11-21 16:16:44,294 ] 81 root - INFO - calculate accuracy score
