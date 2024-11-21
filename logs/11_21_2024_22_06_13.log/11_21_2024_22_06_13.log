@@ -1,0 +1,8 @@
+[ 2024-11-21 22:06:15,357 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2024-11-21 22:06:15,364 ] 97 werkzeug - INFO -  * Debugger PIN: 298-729-150
+[ 2024-11-21 22:06:21,174 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:06:21] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2024-11-21 22:06:21,316 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:06:21] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-11-21 22:06:21,316 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:06:21] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-11-21 22:06:21,348 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:06:21] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png&s=oALUpWU4PGhbRwSIbSfv HTTP/1.1" 200 -
+[ 2024-11-21 22:06:21,363 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:06:21] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[ 2024-11-21 22:06:31,989 ] 97 werkzeug - INFO -  * Detected change in 'D:\\RESUME ML PROJECTS\\Customer Churn Prediction\\app.py', reloading

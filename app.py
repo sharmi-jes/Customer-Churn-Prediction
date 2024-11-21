@@ -26,7 +26,7 @@ def predict_datapoint():
             Gender=request.form.get("Gender"),
 )
         
-
+        
         pred_df=data.get_data_as_dataframe()
         print(pred_df)
         predict_pipeline=PredictPipeline()

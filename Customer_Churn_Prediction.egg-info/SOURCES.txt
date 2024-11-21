@@ -1,3 +1,4 @@
+README.md
 setup.py
 Customer_Churn_Prediction.egg-info/PKG-INFO
 Customer_Churn_Prediction.egg-info/SOURCES.txt

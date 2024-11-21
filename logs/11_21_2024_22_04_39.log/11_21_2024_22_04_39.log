@@ -1,0 +1,10 @@
+[ 2024-11-21 22:04:42,034 ] 25 root - INFO - write a get data transformation fucntion to transform the data
+[ 2024-11-21 22:04:42,049 ] 18 root - INFO - take the decorator class for not use the init methos to create a varible
+[ 2024-11-21 22:04:42,049 ] 32 root - INFO - read the data
+[ 2024-11-21 22:04:42,070 ] 34 root - INFO - create a directory for the arifacts folder
+[ 2024-11-21 22:04:42,070 ] 37 root - INFO - pass the raw data to the folder
+[ 2024-11-21 22:04:42,125 ] 41 root - INFO - split the data train and test data
+[ 2024-11-21 22:04:42,128 ] 44 root - INFO - pass the train data to the path
+[ 2024-11-21 22:04:42,160 ] 47 root - INFO - pass the test data to the path
+[ 2024-11-21 22:04:42,175 ] 50 root - INFO - return the train and test data for the next process
+[ 2024-11-21 22:04:42,175 ] 91 root - INFO - Creating preprocessor object

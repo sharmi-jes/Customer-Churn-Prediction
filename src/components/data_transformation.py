@@ -24,33 +24,15 @@ class DataTransformation:
     
     logging.info("write a get data transformation fucntion to transform the data")
     def get_data_transformation(self):
-        numerical_cols=['CreditScore', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard',
-       'IsActiveMember', 'EstimatedSalary']
+        numerical_columns = ['CreditScore', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'EstimatedSalary']
+        categorical_columns = ['Geography', 'Gender']
 
-        categorical_cols=['Geography', 'Gender']
-
-        num_pipeline=Pipeline(
-            steps=[
-                ("imputer",SimpleImputer(strategy="median")),
-                ("scaler",StandardScaler())
-
-            ]
-        )
-
-        cat_pipeline=Pipeline(
-            steps=[
-                ("imputer",SimpleImputer(strategy="most_frequent")),
-                ("onehotencoder",OneHotEncoder())
-            ]
-        )
-
-        preprocessor=ColumnTransformer(
-            [
-                ("num_pipeline",num_pipeline,numerical_cols),
-                ("cat_pipeline",cat_pipeline,categorical_cols)
-            ]
-        )
-
+        preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', StandardScaler(), numerical_columns),
+        ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_columns)
+    ]
+)
         logging.info("return the preprocessor")
         return preprocessor
     

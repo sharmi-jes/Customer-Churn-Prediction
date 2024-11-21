@@ -1,0 +1,9 @@
+[ 2024-11-21 22:07:36,809 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2024-11-21 22:07:36,819 ] 97 werkzeug - INFO -  * Debugger PIN: 298-729-150
+[ 2024-11-21 22:07:37,349 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:07:37] "GET / HTTP/1.1" 200 -
+[ 2024-11-21 22:07:41,446 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:07:41] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-21 22:08:08,957 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:08:08] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2024-11-21 22:08:09,101 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:08:09] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-11-21 22:08:09,101 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:08:09] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-11-21 22:08:09,150 ] 97 werkzeug - INFO - 127.0.0.1 - - [21/Nov/2024 22:08:09] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png&s=sqq9qSjQ0JLYvGXLa498 HTTP/1.1" 200 -
+[ 2024-11-21 22:10:25,826 ] 97 werkzeug - INFO -  * Detected change in 'd:\\resume ml projects\\customer churn prediction\\src\\components\\data_ingestion.py', reloading
