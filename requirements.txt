@@ -6,4 +6,5 @@ scikit-learn
 dill
 Flask
 gunicorn
+imblearn
 -e .
