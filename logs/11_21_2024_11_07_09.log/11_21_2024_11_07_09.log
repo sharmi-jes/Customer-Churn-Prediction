@@ -1,0 +1,8 @@
+[ 2024-11-21 11:07:12,628 ] 10 root - INFO - take the decorator class for not use the init methos to create a varible
+[ 2024-11-21 11:07:12,628 ] 24 root - INFO - read the data
+[ 2024-11-21 11:07:12,647 ] 26 root - INFO - create a directory for the arifacts folder
+[ 2024-11-21 11:07:12,647 ] 29 root - INFO - pass the raw data to the folder
+[ 2024-11-21 11:07:12,708 ] 33 root - INFO - split the data train and test data
+[ 2024-11-21 11:07:12,712 ] 36 root - INFO - pass the train data to the path
+[ 2024-11-21 11:07:12,762 ] 39 root - INFO - pass the test data to the path
+[ 2024-11-21 11:07:12,779 ] 42 root - INFO - return the train and test data for the next process
